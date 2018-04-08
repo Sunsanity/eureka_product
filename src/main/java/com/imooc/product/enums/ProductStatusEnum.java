@@ -1,6 +1,8 @@
 package com.imooc.product.enums;
 
+import lombok.Getter;
 
+@Getter
 public enum ProductStatusEnum {
     UP(0, "在架"),
     DOWN(1, "下架"),
@@ -15,8 +17,5 @@ public enum ProductStatusEnum {
         this.message = message;
     }
 
-    public Integer getCode() {
-        return code;
-    }
 }
 
