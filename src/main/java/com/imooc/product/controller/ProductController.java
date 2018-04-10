@@ -9,9 +9,7 @@ import com.imooc.product.service.CategoryService;
 import com.imooc.product.service.ProductService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import utils.ResultVOUtil;
 
 import java.util.ArrayList;
@@ -75,8 +73,8 @@ public class ProductController {
      * @param productIdList
      * @return
      */
-    @GetMapping("/listForOrder")
-    public List<ProductInfo> listForOrder(List<String> productIdList) {
+    @PostMapping("/listForOrder")
+    public List<ProductInfo> listForOrder(@RequestBody List<String> productIdList) {
         return productService.findList(productIdList);
     }
 }
