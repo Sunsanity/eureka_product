@@ -1,0 +1,16 @@
+D:\myProjects\eureka_product\server\src\main\java\com\imooc\product\enums\ProductStatusEnum.java
+D:\myProjects\eureka_product\server\src\main\java\com\imooc\product\dataobject\ProductCategory.java
+D:\myProjects\eureka_product\server\src\main\java\com\imooc\product\controller\ServerController.java
+D:\myProjects\eureka_product\server\src\main\java\com\imooc\product\service\CategoryService.java
+D:\myProjects\eureka_product\server\src\main\java\com\imooc\product\repository\ProductInfoRepository.java
+D:\myProjects\eureka_product\server\src\main\java\com\imooc\product\service\impl\ProductServiceImpl.java
+D:\myProjects\eureka_product\server\src\main\java\com\imooc\product\VO\ResultVO.java
+D:\myProjects\eureka_product\server\src\main\java\com\imooc\product\ProductApplication.java
+D:\myProjects\eureka_product\server\src\main\java\com\imooc\product\service\ProductService.java
+D:\myProjects\eureka_product\server\src\main\java\com\imooc\product\dataobject\ProductInfo.java
+D:\myProjects\eureka_product\server\src\main\java\com\imooc\product\repository\ProductCategoryRepository.java
+D:\myProjects\eureka_product\server\src\main\java\com\imooc\product\utils\ResultVOUtil.java
+D:\myProjects\eureka_product\server\src\main\java\com\imooc\product\VO\ProductVO.java
+D:\myProjects\eureka_product\server\src\main\java\com\imooc\product\controller\ProductController.java
+D:\myProjects\eureka_product\server\src\main\java\com\imooc\product\VO\ProductInfoVO.java
+D:\myProjects\eureka_product\server\src\main\java\com\imooc\product\service\impl\CategoryServiceImpl.java
