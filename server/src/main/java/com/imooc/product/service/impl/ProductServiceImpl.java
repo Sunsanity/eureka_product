@@ -8,6 +8,8 @@ import com.imooc.product.enums.ResultEnum;
 import com.imooc.product.exception.ProductException;
 import com.imooc.product.repository.ProductInfoRepository;
 import com.imooc.product.service.ProductService;
+import com.imooc.product.utils.JsonUtil;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +25,8 @@ public class ProductServiceImpl implements ProductService{
 
     @Autowired
     private ProductInfoRepository productInfoRepository;
+    @Autowired
+    private AmqpTemplate amqpTemplate;
 
     @Override
     public List<ProductInfo> findUpAll() {
@@ -44,13 +48,13 @@ public class ProductServiceImpl implements ProductService{
     public void decreaseStock(List<DecreaseStockInput> decreaseStockInputList) {
         List<ProductInfo> productInfoList = decreaseStockProcess(decreaseStockInputList);
 
-//        //发送mq消息
-//        List<ProductInfoOutput> productInfoOutputList = productInfoList.stream().map(e -> {
-//            ProductInfoOutput output = new ProductInfoOutput();
-//            BeanUtils.copyProperties(e, output);
-//            return output;
-//        }).collect(Collectors.toList());
-//        amqpTemplate.convertAndSend("productInfo", JsonUtil.toJson(productInfoOutputList));
+        //发送mq消息
+        List<ProductInfoOutput> productInfoOutputList = productInfoList.stream().map(e -> {
+            ProductInfoOutput output = new ProductInfoOutput();
+            BeanUtils.copyProperties(e, output);
+            return output;
+        }).collect(Collectors.toList());
+        amqpTemplate.convertAndSend("productInfo", JsonUtil.toJson(productInfoOutputList));
 
     }
 
