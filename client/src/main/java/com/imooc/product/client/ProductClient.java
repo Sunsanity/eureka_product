@@ -13,6 +13,7 @@ import java.util.List;
  * Created by SJW
  * 2017-12-10 21:04
  */
+//服务降级回调类及方法
 @FeignClient(name = "product", fallback = ProductClient.ProductClientFallback.class)
 public interface ProductClient {
 
